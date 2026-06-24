@@ -161,9 +161,14 @@ async function syncStore() {
         },
         stars: repoInfo.stargazers_count,
         license: repoInfo.license ? repoInfo.license.spdx_id : null,
-        icon: toRawUrl(manifest.icon) || toRawUrl(jsos.icon)
-          ? toRawUrl(jsos.icon)
-          : toRawUrl(`${repoInfo.html_url}/raw/main/icon.svg`),
+        icon: (() => {
+          if (manifest.icon) return toRawUrl(manifest.icon);
+          if (jsos.icon) {
+            if (jsos.icon.startsWith('http')) return toRawUrl(jsos.icon);
+            return `https://raw.githubusercontent.com/${owner}/${repo}/main/${jsos.icon}`;
+          }
+          return `https://raw.githubusercontent.com/${owner}/${repo}/main/icon.svg`;
+        })(),
         updatedAt: repoInfo.pushed_at,
         widgets: widgets.map(w => ({
           id: w.id,
