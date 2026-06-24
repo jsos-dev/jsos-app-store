@@ -1,0 +1,88 @@
+name: Register New App
+description: Submit your JSOS app to the store
+title: "[App] "
+labels: ["app-registration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill out the form below to register your app.
+        All fields marked with * are required.
+        A maintainer will review your submission before approval.
+
+  - type: input
+    id: app-id
+    attributes:
+      label: App ID *
+      description: "Unique identifier. Format: domain.category.name (lowercase, hyphens only)"
+      placeholder: "e.g. dev.tool.markdown-editor"
+    validations:
+      required: true
+
+  - type: input
+    id: app-name-en
+    attributes:
+      label: App Name (English) *
+      placeholder: "e.g. Markdown Editor"
+    validations:
+      required: true
+
+  - type: input
+    id: app-name-zh
+    attributes:
+      label: App Name (Chinese)
+      placeholder: "e.g. Markdown 编辑器"
+
+  - type: input
+    id: app-desc-en
+    attributes:
+      label: Description (English) *
+      placeholder: "A brief description of what your app does"
+    validations:
+      required: true
+
+  - type: input
+    id: app-desc-zh
+    attributes:
+      label: Description (Chinese)
+      placeholder: "应用的简要描述"
+
+  - type: input
+    id: app-repo
+    attributes:
+      label: GitHub Repository *
+      description: "Your app's source code repository URL"
+      placeholder: "e.g. https://github.com/user/repo"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: app-category
+    attributes:
+      label: Category *
+      options:
+        - tools
+        - games
+        - utilities
+        - education
+        - other
+    validations:
+      required: true
+
+  - type: input
+    id: app-tags
+    attributes:
+      label: Tags
+      description: "Comma-separated tags for search (optional)"
+      placeholder: "e.g. editor, markdown, text"
+
+  - type: checkboxes
+    id: app-confirm
+    attributes:
+      label: Confirmation *
+      description: "Please confirm the following before submitting."
+      options:
+        - label: This is a valid JSOS app (package.json has jsos config with id and startCommand)
+          required: true
+        - label: I own or have permission to register this app
+          required: true
