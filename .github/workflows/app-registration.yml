@@ -159,6 +159,16 @@ jobs:
             // --- Create branch, commit file, open PR ---
             const branchName = `register/${appId}`;
 
+            // Delete existing branch if it exists (from previous failed attempt)
+            try {
+              await github.rest.git.deleteRef({
+                owner: repoOwner, repo: repoName,
+                ref: `heads/${branchName}`
+              });
+            } catch (e) {
+              // Branch doesn't exist, ignore
+            }
+
             const mainRef = await github.rest.git.getRef({
               owner: repoOwner, repo: repoName,
               ref: 'heads/main'
