@@ -1,11 +1,16 @@
 {
-  "generatedAt": "2026-06-24T15:58:47.064Z",
+  "generatedAt": "2026-06-24T17:11:51.890Z",
   "appCount": 2,
   "apps": [
     {
       "id": "dev.jsos.music-player",
-      "name": "Music Player",
-      "description": "A music player for playing audio files",
+      "name": {
+        "en": "Music Player"
+      },
+      "description": {
+        "en": "A music player for playing audio files"
+      },
+      "type": null,
       "category": "tools",
       "tags": [
         "music",
@@ -24,8 +29,24 @@
       },
       "stars": 0,
       "license": null,
-      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.music-player/main/icon.svg",
+      "icon": "icon.svg",
       "updatedAt": "2026-06-20T11:57:43Z",
+      "widgets": [
+        {
+          "id": "favorites",
+          "name": {
+            "en": "My Favorites",
+            "zh-CN": "我的收藏"
+          },
+          "description": {
+            "en": "Play your favorite songs from the desktop widget",
+            "zh-CN": "在桌面小组件播放你收藏的歌曲"
+          },
+          "url": "/#/widget/favorites",
+          "cols": 3,
+          "rows": 1
+        }
+      ],
       "latestRelease": {
         "tag": "v1.1.0",
         "date": "2026-06-18T15:31:41Z",
@@ -34,11 +55,19 @@
     },
     {
       "id": "dev.pi.coding-agent",
-      "name": "Pi Agent",
-      "description": "Pi is a minimal agent harness.",
-      "category": "tools",
+      "name": {
+        "en": "Pi Agent",
+        "zh-CN": "Pi 编程代理"
+      },
+      "description": {
+        "en": "Pi is a minimal agent harness.",
+        "zh-CN": "Pi 是一个极简的编程代理框架。"
+      },
+      "type": "cli",
+      "category": "cli",
       "tags": [
-        "agent"
+        "agent",
+        "coding"
       ],
       "repository": {
         "owner": "jsos-dev",
@@ -53,8 +82,9 @@
       },
       "stars": 0,
       "license": null,
-      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.pi.coding-agent/main/icon.svg",
+      "icon": "icon.svg",
       "updatedAt": "2026-06-23T15:23:13Z",
+      "widgets": [],
       "latestRelease": {
         "tag": "v0.79.10",
         "date": "2026-06-23T15:15:09Z",
