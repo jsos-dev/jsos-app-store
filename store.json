@@ -1,7 +1,37 @@
 {
-  "generatedAt": "2026-06-24T15:31:30.408Z",
-  "appCount": 1,
+  "generatedAt": "2026-06-24T15:58:47.064Z",
+  "appCount": 2,
   "apps": [
+    {
+      "id": "dev.jsos.music-player",
+      "name": "Music Player",
+      "description": "A music player for playing audio files",
+      "category": "tools",
+      "tags": [
+        "music",
+        "media"
+      ],
+      "repository": {
+        "owner": "jsos-dev",
+        "repo": "dev.jsos.music-player",
+        "url": "https://github.com/jsos-dev/dev.jsos.music-player"
+      },
+      "version": "v1.1.0",
+      "author": {
+        "name": "jsos-dev",
+        "url": "https://github.com/jsos-dev",
+        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
+      },
+      "stars": 0,
+      "license": null,
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.music-player/main/icon.svg",
+      "updatedAt": "2026-06-20T11:57:43Z",
+      "latestRelease": {
+        "tag": "v1.1.0",
+        "date": "2026-06-18T15:31:41Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.music-player/releases/download/v1.1.0/dev.jsos.music-player-1.1.0.zip"
+      }
+    },
     {
       "id": "dev.pi.coding-agent",
       "name": "Pi Agent",
@@ -23,7 +53,7 @@
       },
       "stars": 0,
       "license": null,
-      "icon": "https://github.com/jsos-dev/dev.pi.coding-agent/raw/main/icon.svg",
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.pi.coding-agent/main/icon.svg",
       "updatedAt": "2026-06-23T15:23:13Z",
       "latestRelease": {
         "tag": "v0.79.10",
