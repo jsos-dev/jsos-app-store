@@ -14,7 +14,7 @@ body:
     id: app-id
     attributes:
       label: App ID *
-      description: "Unique identifier. Format: domain.category.name (lowercase, hyphens only)"
+      description: "Unique identifier. Format: domain.category.name (lowercase, hyphens and dots allowed)"
       placeholder: "e.g. dev.tool.markdown-editor"
     validations:
       required: true

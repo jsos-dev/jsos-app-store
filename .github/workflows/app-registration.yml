@@ -76,12 +76,13 @@ jobs:
             }
 
             // --- Validate app ID format ---
-            if (!/^[a-z0-9]+(\.[a-z0-9]+){2,}$/.test(appId)) {
+            if (!/^[a-z0-9]+(\.[a-z0-9-]+){2,}$/.test(appId)) {
               await reject(
                 `Invalid App ID format: \`${appId}\`\n\n` +
-                'Format must be: `domain.category.name` (lowercase, dots as separators)\n\n' +
+                'Format must be: `domain.category.name` (lowercase, hyphens and dots allowed)\n\n' +
                 'Examples:\n' +
                 '- `dev.tool.markdown-editor`\n' +
+                '- `dev.pi.coding-agent`\n' +
                 '- `com.game.tetris`\n' +
                 '- `org.util.file-manager`'
               );
