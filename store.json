@@ -1,14 +1,16 @@
 {
-  "generatedAt": "2026-06-24T17:12:43.067Z",
+  "generatedAt": "2026-06-24T17:17:53.682Z",
   "appCount": 2,
   "apps": [
     {
       "id": "dev.jsos.music-player",
       "name": {
-        "en": "Music Player"
+        "en": "Music Player",
+        "zh-CN": "音乐播放器"
       },
       "description": {
-        "en": "A music player for playing audio files"
+        "en": "A music player for playing audio files",
+        "zh-CN": "用于播放音频文件的音乐播放器"
       },
       "type": null,
       "category": "tools",
@@ -29,7 +31,7 @@
       },
       "stars": 0,
       "license": null,
-      "icon": "icon.svg",
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.music-player/main/icon.svg",
       "updatedAt": "2026-06-20T11:57:43Z",
       "widgets": [
         {
@@ -56,8 +58,7 @@
     {
       "id": "dev.pi.coding-agent",
       "name": {
-        "en": "Pi Agent",
-        "zh-CN": "Pi 编程代理"
+        "en": "Pi Agent"
       },
       "description": {
         "en": "Pi is a minimal agent harness.",
@@ -82,7 +83,7 @@
       },
       "stars": 0,
       "license": null,
-      "icon": "icon.svg",
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.pi.coding-agent/main/icon.svg",
       "updatedAt": "2026-06-23T15:23:13Z",
       "widgets": [],
       "latestRelease": {
