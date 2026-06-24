@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-06-24T15:31:30.408Z",
+  "appCount": 1,
+  "apps": [
+    {
+      "id": "dev.pi.coding-agent",
+      "name": "Pi Agent",
+      "description": "Pi is a minimal agent harness.",
+      "category": "tools",
+      "tags": [
+        "agent"
+      ],
+      "repository": {
+        "owner": "jsos-dev",
+        "repo": "dev.pi.coding-agent",
+        "url": "https://github.com/jsos-dev/dev.pi.coding-agent"
+      },
+      "version": "v0.79.10",
+      "author": {
+        "name": "jsos-dev",
+        "url": "https://github.com/jsos-dev",
+        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
+      },
+      "stars": 0,
+      "license": null,
+      "icon": "https://github.com/jsos-dev/dev.pi.coding-agent/raw/main/icon.svg",
+      "updatedAt": "2026-06-23T15:23:13Z",
+      "latestRelease": {
+        "tag": "v0.79.10",
+        "date": "2026-06-23T15:15:09Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.pi.coding-agent/releases/download/v0.79.10/dev.pi.coding-agent-v0.79.10.zip"
+      }
+    }
+  ]
+}
