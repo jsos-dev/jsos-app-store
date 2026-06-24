@@ -25,6 +25,18 @@ function findZipAsset(release) {
   return zip ? zip.browser_download_url : null;
 }
 
+// Convert GitHub URL to raw.githubusercontent.com URL to avoid 302 redirect
+// Input:  https://github.com/user/repo/raw/main/icon.svg
+// Output: https://raw.githubusercontent.com/user/repo/main/icon.svg
+function toRawUrl(url) {
+  if (!url) return url;
+  const match = url.match(/^https?:\/\/github\.com\/([^/]+)\/([^/]+)\/raw\/([^/]+)\/(.+)$/);
+  if (match) {
+    return `https://raw.githubusercontent.com/${match[1]}/${match[2]}/${match[3]}/${match[4]}`;
+  }
+  return url;
+}
+
 async function syncStore() {
   const appsDir = path.join(__dirname, '..', 'apps');
 
@@ -82,7 +94,7 @@ async function syncStore() {
         },
         stars: repoInfo.stargazers_count,
         license: repoInfo.license ? repoInfo.license.spdx_id : null,
-        icon: manifest.icon || `${repoInfo.html_url}/raw/main/icon.svg`,
+        icon: toRawUrl(manifest.icon) || toRawUrl(`${repoInfo.html_url}/raw/main/icon.svg`),
         updatedAt: repoInfo.pushed_at,
         latestRelease: latestRelease
           ? {
