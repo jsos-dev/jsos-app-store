@@ -1,0 +1,14 @@
+{
+  "id": "dev.jsos.music-player",
+  "name": "Music Player",
+  "description": "A music player for playing audio files",
+  "repository": {
+    "owner": "jsos-dev",
+    "repo": "dev.jsos.music-player"
+  },
+  "category": "tools",
+  "tags": [
+    "music",
+    "media"
+  ]
+}
