@@ -20,32 +20,20 @@ body:
       required: true
 
   - type: input
-    id: app-name-en
+    id: app-name
     attributes:
-      label: App Name (English) *
+      label: App Name *
       placeholder: "e.g. Markdown Editor"
     validations:
       required: true
 
   - type: input
-    id: app-name-zh
+    id: app-desc
     attributes:
-      label: App Name (Chinese)
-      placeholder: "e.g. Markdown 编辑器"
-
-  - type: input
-    id: app-desc-en
-    attributes:
-      label: Description (English) *
+      label: Description *
       placeholder: "A brief description of what your app does"
     validations:
       required: true
-
-  - type: input
-    id: app-desc-zh
-    attributes:
-      label: Description (Chinese)
-      placeholder: "应用的简要描述"
 
   - type: input
     id: app-repo

@@ -26,11 +26,9 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require('fs');
             const { owner: repoOwner, repo: repoName } = context.repo;
             const issueNumber = context.issue.number;
 
-            // --- Helper: reject issue ---
             async function reject(reason) {
               await github.rest.issues.createComment({
                 owner: repoOwner, repo: repoName,
@@ -47,26 +45,44 @@ jobs:
               });
             }
 
-            // --- 1. Extract parsed fields ---
-            const appId = String('${{ steps.parse.outputs.app-id }}').trim();
-            const nameEn = String('${{ steps.parse.outputs.app-name-en }}').trim();
-            const nameZh = String('${{ steps.parse.outputs.app-name-zh }}').trim() || nameEn;
-            const descEn = String('${{ steps.parse.outputs.app-desc-en }}').trim();
-            const descZh = String('${{ steps.parse.outputs.app-desc-zh }}').trim() || descEn;
-            const repoUrl = String('${{ steps.parse.outputs.app-repo }}').trim();
-            const category = String('${{ steps.parse.outputs.app-category }}').trim();
-            const tagsRaw = String('${{ steps.parse.outputs.app-tags }}').trim();
+            // --- Parse payload ---
+            let payload;
+            try {
+              payload = JSON.parse(`${{ steps.parse.outputs.payload }}`);
+            } catch (e) {
+              console.log('Raw payload:', `${{ steps.parse.outputs.payload }}`);
+              await reject('Failed to parse issue form data.');
+              return;
+            }
+
+            console.log('Parsed payload:', JSON.stringify(payload, null, 2));
+
+            // --- Extract fields ---
+            const appId = String(payload['app-id'] || '').trim();
+            const appName = String(payload['app-name'] || '').trim();
+            const appDesc = String(payload['app-desc'] || '').trim();
+            const repoUrl = String(payload['app-repo'] || '').trim();
+            const category = String(payload['app-category'] || '').trim();
+            const tagsRaw = String(payload['app-tags'] || '').trim();
             const tags = tagsRaw
               ? tagsRaw.split(',').map(t => t.trim()).filter(Boolean)
               : [];
 
-            // --- 2. Validate required fields ---
-            if (!appId || !nameEn || !descEn || !repoUrl || !category) {
-              await reject('Missing required fields. Please fill out all required fields in the issue form.');
+            console.log('Extracted:', { appId, appName, appDesc, repoUrl, category });
+
+            // --- Validate required fields ---
+            if (!appId || !appName || !appDesc || !repoUrl || !category) {
+              const missing = [];
+              if (!appId) missing.push('App ID');
+              if (!appName) missing.push('App Name');
+              if (!appDesc) missing.push('Description');
+              if (!repoUrl) missing.push('GitHub Repository');
+              if (!category) missing.push('Category');
+              await reject(`Missing required fields: ${missing.join(', ')}`);
               return;
             }
 
-            // --- 3. Validate app ID format ---
+            // --- Validate app ID format ---
             if (!/^[a-z0-9]+(\.[a-z0-9]+){2,}$/.test(appId)) {
               await reject(
                 `Invalid App ID format: \`${appId}\`\n\n` +
@@ -79,7 +95,7 @@ jobs:
               return;
             }
 
-            // --- 4. Parse repo URL ---
+            // --- Parse repo URL ---
             const repoMatch = repoUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
             if (!repoMatch) {
               await reject(
@@ -90,7 +106,7 @@ jobs:
             }
             const [, githubOwner, githubRepo] = repoMatch;
 
-            // --- 5. Check ID uniqueness ---
+            // --- Check ID uniqueness ---
             try {
               const existing = await github.rest.repos.getContent({
                 owner: repoOwner, repo: repoName,
@@ -104,7 +120,7 @@ jobs:
               if (e.status !== 404) throw e;
             }
 
-            // --- 6. Validate repo exists ---
+            // --- Validate repo exists ---
             let repoInfo;
             try {
               repoInfo = await github.rest.repos.get({ owner: githubOwner, repo: githubRepo });
@@ -113,7 +129,7 @@ jobs:
               return;
             }
 
-            // --- 7. Validate repo has package.json with jsos config ---
+            // --- Validate repo has package.json with jsos config ---
             try {
               const pkgFile = await github.rest.repos.getContent({
                 owner: githubOwner, repo: githubRepo,
@@ -133,21 +149,20 @@ jobs:
                 await reject('Repository does not contain a package.json file.');
                 return;
               }
-              // If we can't read it (private repo, etc.), skip this check
               console.log(`Warning: Could not read package.json: ${e.message}`);
             }
 
-            // --- 8. Build app.json manifest ---
+            // --- Build app.json manifest ---
             const appManifest = {
               id: appId,
-              name: { en: nameEn, 'zh-CN': nameZh },
-              description: { en: descEn, 'zh-CN': descZh },
+              name: appName,
+              description: appDesc,
               repository: { owner: githubOwner, repo: githubRepo },
               category,
               ...(tags.length > 0 && { tags })
             };
 
-            // --- 9. Create branch, commit file, open PR ---
+            // --- Create branch, commit file, open PR ---
             const branchName = `register/${appId}`;
 
             const mainRef = await github.rest.git.getRef({
@@ -168,13 +183,13 @@ jobs:
             await github.rest.repos.createOrUpdateFileContents({
               owner: repoOwner, repo: repoName,
               path: `apps/${appId}.json`,
-              message: `Register app: ${nameEn}`,
+              message: `Register app: ${appName}`,
               content: fileContent,
               branch: branchName
             });
 
             const prBody = [
-              `Registers **${nameEn}** to the JSOS App Store.`,
+              `Registers **${appName}** to the JSOS App Store.`,
               '',
               '## App Info',
               `- **App ID**: \`${appId}\``,
@@ -188,13 +203,13 @@ jobs:
 
             const pr = await github.rest.pulls.create({
               owner: repoOwner, repo: repoName,
-              title: `[App] ${nameEn}`,
+              title: `[App] ${appName}`,
               body: prBody,
               head: branchName,
               base: 'main'
             });
 
-            // --- 10. Update issue ---
+            // --- Update issue ---
             await github.rest.issues.createComment({
               owner: repoOwner, repo: repoName,
               issue_number: issueNumber,
