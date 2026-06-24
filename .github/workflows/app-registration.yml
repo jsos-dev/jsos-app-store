@@ -24,6 +24,8 @@ jobs:
 
       - name: Validate and create PR
         uses: actions/github-script@v7
+        env:
+          ISSUE_PAYLOAD: ${{ steps.parse.outputs.payload }}
         with:
           script: |
             const { owner: repoOwner, repo: repoName } = context.repo;
@@ -45,12 +47,12 @@ jobs:
               });
             }
 
-            // --- Parse payload ---
+            // --- Parse payload from environment variable ---
             let payload;
             try {
-              payload = JSON.parse(`${{ steps.parse.outputs.payload }}`);
+              payload = JSON.parse(process.env.ISSUE_PAYLOAD);
             } catch (e) {
-              console.log('Raw payload:', `${{ steps.parse.outputs.payload }}`);
+              console.log('Raw payload:', process.env.ISSUE_PAYLOAD);
               await reject('Failed to parse issue form data.');
               return;
             }
