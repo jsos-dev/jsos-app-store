@@ -1,0 +1,13 @@
+{
+  "id": "dev.pi.coding-agent",
+  "name": "Pi Agent",
+  "description": "Pi is a minimal agent harness.",
+  "repository": {
+    "owner": "jsos-dev",
+    "repo": "dev.pi.coding-agent"
+  },
+  "category": "tools",
+  "tags": [
+    "agent"
+  ]
+}
