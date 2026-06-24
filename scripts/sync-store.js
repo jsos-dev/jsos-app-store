@@ -15,6 +15,22 @@ async function apiFetch(url) {
   return resp.json();
 }
 
+async function fetchRawFile(owner, repo, filePath) {
+  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
+  const resp = await fetch(url, {
+    headers: {
+      Accept: 'application/vnd.github.v3+json',
+      Authorization: `token ${TOKEN}`,
+    },
+  });
+  if (!resp.ok) return null;
+  const data = await resp.json();
+  if (data.content && data.encoding === 'base64') {
+    return Buffer.from(data.content, 'base64').toString('utf-8');
+  }
+  return null;
+}
+
 async function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
@@ -35,6 +51,33 @@ function toRawUrl(url) {
     return `https://raw.githubusercontent.com/${match[1]}/${match[2]}/${match[3]}/${match[4]}`;
   }
   return url;
+}
+
+// Fetch package.json from source repo and extract jsos metadata
+async function fetchPackageJson(owner, repo) {
+  const content = await fetchRawFile(owner, repo, 'package.json');
+  if (!content) return null;
+  try {
+    return JSON.parse(content);
+  } catch {
+    return null;
+  }
+}
+
+// Resolve localized value: support both string and { en: ..., zh-CN: ... } format
+function resolveLocalized(value) {
+  if (!value) return value;
+  if (typeof value === 'string') return value;
+  if (typeof value === 'object' && value !== null) return value;
+  return value;
+}
+
+// Ensure value is in localized format { en: ..., zh-CN: ... }
+function ensureLocalized(value) {
+  if (!value) return value;
+  if (typeof value === 'string') return { en: value };
+  if (typeof value === 'object' && value !== null) return value;
+  return { en: String(value) };
 }
 
 async function syncStore() {
@@ -75,10 +118,34 @@ async function syncStore() {
         console.log(`  No releases found for ${owner}/${repo}`);
       }
 
+      // Fetch package.json from source repo for enriched metadata
+      let pkgData = null;
+      try {
+        pkgData = await fetchPackageJson(owner, repo);
+        await sleep(500);
+      } catch (e) {
+        console.log(`  Could not fetch package.json for ${owner}/${repo}`);
+      }
+
+      // Extract jsos metadata from package.json
+      const jsos = pkgData?.jsos || {};
+
+      // Merge name: prefer manifest > jsos > repo info
+      const name = manifest.name || jsos.name || repoInfo.name;
+      // Merge description: prefer manifest > jsos
+      const description = manifest.description || jsos.description || '';
+
+      // Extract type from jsos, fallback to manifest
+      const type = jsos.type || manifest.type || null;
+
+      // Extract widgets from jsos
+      const widgets = jsos.widgets || manifest.widgets || [];
+
       apps.push({
         id: manifest.id,
-        name: manifest.name,
-        description: manifest.description,
+        name: ensureLocalized(name),
+        description: ensureLocalized(description),
+        type,
         category: manifest.category,
         tags: manifest.tags || [],
         repository: {
@@ -94,8 +161,18 @@ async function syncStore() {
         },
         stars: repoInfo.stargazers_count,
         license: repoInfo.license ? repoInfo.license.spdx_id : null,
-        icon: toRawUrl(manifest.icon) || toRawUrl(`${repoInfo.html_url}/raw/main/icon.svg`),
+        icon: toRawUrl(manifest.icon) || toRawUrl(jsos.icon)
+          ? toRawUrl(jsos.icon)
+          : toRawUrl(`${repoInfo.html_url}/raw/main/icon.svg`),
         updatedAt: repoInfo.pushed_at,
+        widgets: widgets.map(w => ({
+          id: w.id,
+          name: ensureLocalized(w.name),
+          description: ensureLocalized(w.description || ''),
+          url: w.url,
+          cols: w.cols || w.width || null,
+          rows: w.rows || w.height || null,
+        })),
         latestRelease: latestRelease
           ? {
               tag: latestRelease.tag_name,
@@ -107,7 +184,8 @@ async function syncStore() {
           : null,
       });
 
-      console.log(`  OK: v${latestRelease ? latestRelease.tag_name : '0.0.0'}, ${repoInfo.stargazers_count} stars`);
+      const widgetCount = widgets.length;
+      console.log(`  OK: v${latestRelease ? latestRelease.tag_name : '0.0.0'}, ${repoInfo.stargazers_count} stars${widgetCount > 0 ? `, ${widgetCount} widget(s)` : ''}`);
     } catch (e) {
       console.error(`  FAILED: ${file} — ${e.message}`);
       errors.push({ file, error: e.message });

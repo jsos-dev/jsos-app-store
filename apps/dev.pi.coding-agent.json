@@ -1,13 +1,17 @@
 {
   "id": "dev.pi.coding-agent",
-  "name": "Pi Agent",
-  "description": "Pi is a minimal agent harness.",
+  "name": {
+    "en": "Pi Agent",
+    "zh-CN": "Pi 编程代理"
+  },
+  "description": {
+    "en": "Pi is a minimal agent harness.",
+    "zh-CN": "Pi 是一个极简的编程代理框架。"
+  },
   "repository": {
     "owner": "jsos-dev",
     "repo": "dev.pi.coding-agent"
   },
-  "category": "tools",
-  "tags": [
-    "agent"
-  ]
+  "category": "cli",
+  "tags": ["agent", "coding"]
 }

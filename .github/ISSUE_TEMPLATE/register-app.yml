@@ -49,10 +49,14 @@ body:
     attributes:
       label: Category *
       options:
-        - tools
+        - cli
+        - gui
         - games
-        - utilities
         - education
+        - productivity
+        - media
+        - devtools
+        - utilities
         - other
     validations:
       required: true
