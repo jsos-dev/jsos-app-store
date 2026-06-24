@@ -130,10 +130,10 @@ async function syncStore() {
       // Extract jsos metadata from package.json
       const jsos = pkgData?.jsos || {};
 
-      // Merge name: prefer manifest > jsos > repo info
-      const name = manifest.name || jsos.name || repoInfo.name;
-      // Merge description: prefer manifest > jsos
-      const description = manifest.description || jsos.description || '';
+      // Merge name: prefer jsos (multi-language) > manifest > repo info
+      const name = jsos.name || manifest.name || repoInfo.name;
+      // Merge description: prefer jsos (multi-language) > manifest
+      const description = jsos.description || manifest.description || '';
 
       // Extract type from jsos, fallback to manifest
       const type = jsos.type || manifest.type || null;
