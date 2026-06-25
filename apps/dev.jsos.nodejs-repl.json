@@ -1,0 +1,13 @@
+{
+  "id": "dev.jsos.nodejs-repl",
+  "name": "Node.js",
+  "description": "Node.js REPL environment",
+  "repository": {
+    "owner": "jsos-dev",
+    "repo": "dev.jsos.nodejs-repl"
+  },
+  "category": "cli",
+  "tags": [
+    "_No response_"
+  ]
+}
