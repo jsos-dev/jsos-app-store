@@ -147,7 +147,7 @@ async function syncStore() {
         description: ensureLocalized(description),
         type,
         category: manifest.category,
-        tags: manifest.tags || [],
+        tags: (manifest.tags || []).filter(t => t !== '_No response_'),
         repository: {
           owner,
           repo,
