@@ -1,0 +1,13 @@
+{
+  "id": "dev.jsos.settings",
+  "name": "JSOS Settings",
+  "description": "JSOS System settings and preferences",
+  "repository": {
+    "owner": "jsos-dev",
+    "repo": "dev.jsos.settings"
+  },
+  "category": "utilities",
+  "tags": [
+    "jsos-app"
+  ]
+}
