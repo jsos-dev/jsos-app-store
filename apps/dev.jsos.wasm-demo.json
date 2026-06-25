@@ -1,0 +1,14 @@
+{
+  "id": "dev.jsos.wasm-demo",
+  "name": "Wasm Demo",
+  "description": "Run wasm on JSOS",
+  "repository": {
+    "owner": "jsos-dev",
+    "repo": "dev.jsos.wasm-demo"
+  },
+  "category": "cli",
+  "tags": [
+    "demo",
+    "wasm"
+  ]
+}
