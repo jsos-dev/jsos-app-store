@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-25T13:13:04.459Z",
-  "appCount": 4,
+  "generatedAt": "2026-06-25T13:17:09.447Z",
+  "appCount": 5,
   "apps": [
     {
       "id": "dev.jsos.docs",
@@ -144,6 +144,43 @@
         "tag": "v1.0.2",
         "date": "2026-06-18T15:00:03Z",
         "zipUrl": "https://github.com/jsos-dev/dev.jsos.nodejs-repl/releases/download/v1.0.2/dev.jsos.nodejs-repl-1.0.2.zip"
+      }
+    },
+    {
+      "id": "dev.jsos.settings",
+      "name": {
+        "en": "Settings",
+        "zh-CN": "设置"
+      },
+      "description": {
+        "en": "System settings and preferences",
+        "zh-CN": "系统设置与偏好"
+      },
+      "type": null,
+      "category": "utilities",
+      "tags": [
+        "jsos-app"
+      ],
+      "repository": {
+        "owner": "jsos-dev",
+        "repo": "dev.jsos.settings",
+        "url": "https://github.com/jsos-dev/dev.jsos.settings"
+      },
+      "version": "v1.2.25",
+      "author": {
+        "name": "jsos-dev",
+        "url": "https://github.com/jsos-dev",
+        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
+      },
+      "stars": 0,
+      "license": null,
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.settings/main/icon.svg",
+      "updatedAt": "2026-06-21T18:30:01Z",
+      "widgets": [],
+      "latestRelease": {
+        "tag": "v1.2.25",
+        "date": "2026-06-21T18:30:23Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.settings/releases/download/v1.2.25/dev.jsos.settings-v1.2.25.zip"
       }
     },
     {
