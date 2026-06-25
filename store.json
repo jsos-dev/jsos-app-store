@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-25T13:17:09.447Z",
-  "appCount": 5,
+  "generatedAt": "2026-06-25T13:18:38.746Z",
+  "appCount": 6,
   "apps": [
     {
       "id": "dev.jsos.docs",
@@ -54,6 +54,72 @@
         "tag": "v1.2.2",
         "date": "2026-06-21T15:21:25Z",
         "zipUrl": "https://github.com/jsos-dev/dev.jsos.docs/releases/download/v1.2.2/dev.jsos.docs-v1.2.2.zip"
+      }
+    },
+    {
+      "id": "dev.jsos.filemanager",
+      "name": {
+        "en": "File Manager",
+        "zh-CN": "文件"
+      },
+      "description": {
+        "en": "A web-based file manager for browsing and managing files",
+        "zh-CN": "基于 Web 的文件管理器，用于浏览和管理文件"
+      },
+      "type": null,
+      "category": "utilities",
+      "tags": [
+        "jsos-app"
+      ],
+      "repository": {
+        "owner": "jsos-dev",
+        "repo": "dev.jsos.filemanager",
+        "url": "https://github.com/jsos-dev/dev.jsos.filemanager"
+      },
+      "version": "v0.3.6",
+      "author": {
+        "name": "jsos-dev",
+        "url": "https://github.com/jsos-dev",
+        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
+      },
+      "stars": 0,
+      "license": null,
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.filemanager/main/icon.svg",
+      "updatedAt": "2026-06-20T03:15:54Z",
+      "widgets": [
+        {
+          "id": "disk-info",
+          "name": {
+            "en": "Shared Data",
+            "zh-CN": "共享目录"
+          },
+          "description": {
+            "en": "Display shared directory statistics",
+            "zh-CN": "显示共享目录文件/目录数量和总大小"
+          },
+          "url": "/#/widget/disk-info",
+          "cols": 3,
+          "rows": 1
+        },
+        {
+          "id": "drag-upload",
+          "name": {
+            "en": "Quick Upload",
+            "zh-CN": "快速上传"
+          },
+          "description": {
+            "en": "Drag & drop files to shared directory",
+            "zh-CN": "拖拽文件上传到共享目录"
+          },
+          "url": "/#/widget/drag-upload",
+          "cols": 3,
+          "rows": 2
+        }
+      ],
+      "latestRelease": {
+        "tag": "v0.3.6",
+        "date": "2026-06-20T03:16:20Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.filemanager/releases/download/v0.3.6/dev.jsos.filemanager-v0.3.6.zip"
       }
     },
     {
