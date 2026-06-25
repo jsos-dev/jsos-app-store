@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T13:21:51.058Z",
+  "generatedAt": "2026-06-25T13:32:52.675Z",
   "appCount": 7,
   "apps": [
     {
@@ -187,9 +187,7 @@
       },
       "type": "cli",
       "category": "cli",
-      "tags": [
-        "_No response_"
-      ],
+      "tags": [],
       "repository": {
         "owner": "jsos-dev",
         "repo": "dev.jsos.nodejs-repl",
