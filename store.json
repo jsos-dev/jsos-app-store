@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-25T10:29:56.432Z",
-  "appCount": 2,
+  "generatedAt": "2026-06-25T13:06:16.168Z",
+  "appCount": 3,
   "apps": [
     {
       "id": "dev.jsos.music-player",
@@ -53,6 +53,43 @@
         "tag": "v1.1.0",
         "date": "2026-06-18T15:31:41Z",
         "zipUrl": "https://github.com/jsos-dev/dev.jsos.music-player/releases/download/v1.1.0/dev.jsos.music-player-1.1.0.zip"
+      }
+    },
+    {
+      "id": "dev.jsos.nodejs-repl",
+      "name": {
+        "en": "Node.js",
+        "zh-CN": "Node.js"
+      },
+      "description": {
+        "en": "Node.js REPL environment",
+        "zh-CN": "Node.js REPL 运行环境"
+      },
+      "type": "cli",
+      "category": "cli",
+      "tags": [
+        "_No response_"
+      ],
+      "repository": {
+        "owner": "jsos-dev",
+        "repo": "dev.jsos.nodejs-repl",
+        "url": "https://github.com/jsos-dev/dev.jsos.nodejs-repl"
+      },
+      "version": "v1.0.2",
+      "author": {
+        "name": "jsos-dev",
+        "url": "https://github.com/jsos-dev",
+        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
+      },
+      "stars": 0,
+      "license": null,
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.nodejs-repl/main/icon.svg",
+      "updatedAt": "2026-06-18T14:59:45Z",
+      "widgets": [],
+      "latestRelease": {
+        "tag": "v1.0.2",
+        "date": "2026-06-18T15:00:03Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.nodejs-repl/releases/download/v1.0.2/dev.jsos.nodejs-repl-1.0.2.zip"
       }
     },
     {
