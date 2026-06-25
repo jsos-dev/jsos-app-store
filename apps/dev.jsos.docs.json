@@ -1,0 +1,15 @@
+{
+  "id": "dev.jsos.docs",
+  "name": "JSOS Docs",
+  "description": "JSOS development documentation and API reference",
+  "repository": {
+    "owner": "jsos-dev",
+    "repo": "dev.jsos.docs"
+  },
+  "category": "devtools",
+  "tags": [
+    "markdown",
+    "docs",
+    "blog"
+  ]
+}
