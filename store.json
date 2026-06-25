@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-25T13:32:52.675Z",
-  "appCount": 7,
+  "generatedAt": "2026-06-25T15:45:16.915Z",
+  "appCount": 8,
   "apps": [
     {
       "id": "dev.jsos.docs",
@@ -76,7 +76,7 @@
         "repo": "dev.jsos.filemanager",
         "url": "https://github.com/jsos-dev/dev.jsos.filemanager"
       },
-      "version": "v0.3.6",
+      "version": "v0.3.7",
       "author": {
         "name": "jsos-dev",
         "url": "https://github.com/jsos-dev",
@@ -85,7 +85,7 @@
       "stars": 0,
       "license": null,
       "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.filemanager/main/icon.svg",
-      "updatedAt": "2026-06-20T03:15:54Z",
+      "updatedAt": "2026-06-25T14:15:53Z",
       "widgets": [
         {
           "id": "disk-info",
@@ -117,9 +117,9 @@
         }
       ],
       "latestRelease": {
-        "tag": "v0.3.6",
-        "date": "2026-06-20T03:16:20Z",
-        "zipUrl": "https://github.com/jsos-dev/dev.jsos.filemanager/releases/download/v0.3.6/dev.jsos.filemanager-v0.3.6.zip"
+        "tag": "v0.3.7",
+        "date": "2026-06-25T14:16:43Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.filemanager/releases/download/v0.3.7/dev.jsos.filemanager-v0.3.7.zip"
       }
     },
     {
@@ -282,6 +282,44 @@
         "tag": "v1.1.10",
         "date": "2026-06-18T14:39:02Z",
         "zipUrl": "https://github.com/jsos-dev/dev.jsos.terminal/releases/download/v1.1.10/dev.jsos.terminal-1.1.10.zip"
+      }
+    },
+    {
+      "id": "dev.jsos.wasm-demo",
+      "name": {
+        "en": "Wasm Demo",
+        "zh-CN": "Wasm 示例"
+      },
+      "description": {
+        "en": "Test executing wasm binary using wasm command (Rust version)",
+        "zh-CN": "测试使用wasm命令执行wasm二进制（rust版）"
+      },
+      "type": "cli",
+      "category": "cli",
+      "tags": [
+        "demo",
+        "wasm"
+      ],
+      "repository": {
+        "owner": "jsos-dev",
+        "repo": "dev.jsos.wasm-demo",
+        "url": "https://github.com/jsos-dev/dev.jsos.wasm-demo"
+      },
+      "version": "v0.0.2",
+      "author": {
+        "name": "jsos-dev",
+        "url": "https://github.com/jsos-dev",
+        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
+      },
+      "stars": 0,
+      "license": null,
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.wasm-demo/main/icon.svg",
+      "updatedAt": "2026-06-25T15:41:17Z",
+      "widgets": [],
+      "latestRelease": {
+        "tag": "v0.0.2",
+        "date": "2026-06-25T15:41:45Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.wasm-demo/releases/download/v0.0.2/wasm-demo.zip"
       }
     },
     {
