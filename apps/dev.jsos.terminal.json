@@ -1,0 +1,13 @@
+{
+  "id": "dev.jsos.terminal",
+  "name": "Terminal",
+  "description": "Interactive shell terminal",
+  "repository": {
+    "owner": "jsos-dev",
+    "repo": "dev.jsos.terminal"
+  },
+  "category": "cli",
+  "tags": [
+    "jsos-app"
+  ]
+}
