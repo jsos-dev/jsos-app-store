@@ -1,0 +1,13 @@
+{
+  "id": "dev.jsos.filemanager",
+  "name": "FileManager",
+  "description": "A web-based file manager for browsing and managing files",
+  "repository": {
+    "owner": "jsos-dev",
+    "repo": "dev.jsos.filemanager"
+  },
+  "category": "utilities",
+  "tags": [
+    "jsos-app"
+  ]
+}
