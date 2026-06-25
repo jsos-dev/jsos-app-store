@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-25T13:18:38.746Z",
-  "appCount": 6,
+  "generatedAt": "2026-06-25T13:21:51.058Z",
+  "appCount": 7,
   "apps": [
     {
       "id": "dev.jsos.docs",
@@ -247,6 +247,43 @@
         "tag": "v1.2.25",
         "date": "2026-06-21T18:30:23Z",
         "zipUrl": "https://github.com/jsos-dev/dev.jsos.settings/releases/download/v1.2.25/dev.jsos.settings-v1.2.25.zip"
+      }
+    },
+    {
+      "id": "dev.jsos.terminal",
+      "name": {
+        "en": "Terminal",
+        "zh-CN": "终端"
+      },
+      "description": {
+        "en": "Interactive shell terminal",
+        "zh-CN": "交互式 Shell 终端"
+      },
+      "type": "cli",
+      "category": "cli",
+      "tags": [
+        "jsos-app"
+      ],
+      "repository": {
+        "owner": "jsos-dev",
+        "repo": "dev.jsos.terminal",
+        "url": "https://github.com/jsos-dev/dev.jsos.terminal"
+      },
+      "version": "v1.1.10",
+      "author": {
+        "name": "jsos-dev",
+        "url": "https://github.com/jsos-dev",
+        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
+      },
+      "stars": 0,
+      "license": null,
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.terminal/main/icon.svg",
+      "updatedAt": "2026-06-18T14:38:44Z",
+      "widgets": [],
+      "latestRelease": {
+        "tag": "v1.1.10",
+        "date": "2026-06-18T14:39:02Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.terminal/releases/download/v1.1.10/dev.jsos.terminal-1.1.10.zip"
       }
     },
     {
