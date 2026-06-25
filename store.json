@@ -1,7 +1,61 @@
 {
-  "generatedAt": "2026-06-25T13:06:16.168Z",
-  "appCount": 3,
+  "generatedAt": "2026-06-25T13:13:04.459Z",
+  "appCount": 4,
   "apps": [
+    {
+      "id": "dev.jsos.docs",
+      "name": {
+        "en": "Docs",
+        "zh-CN": "文档"
+      },
+      "description": {
+        "en": "JSOS development documentation and API reference",
+        "zh-CN": "JSOS 开发文档和 API 参考"
+      },
+      "type": null,
+      "category": "devtools",
+      "tags": [
+        "markdown",
+        "docs",
+        "blog"
+      ],
+      "repository": {
+        "owner": "jsos-dev",
+        "repo": "dev.jsos.docs",
+        "url": "https://github.com/jsos-dev/dev.jsos.docs"
+      },
+      "version": "v1.2.2",
+      "author": {
+        "name": "jsos-dev",
+        "url": "https://github.com/jsos-dev",
+        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
+      },
+      "stars": 0,
+      "license": null,
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.docs/main/icon.svg",
+      "updatedAt": "2026-06-21T15:20:50Z",
+      "widgets": [
+        {
+          "id": "doc-nav",
+          "name": {
+            "en": "Doc Nav",
+            "zh-CN": "文档导航"
+          },
+          "description": {
+            "en": "Quick documentation navigation",
+            "zh-CN": "文档快速导航"
+          },
+          "url": "/widget-nav.html",
+          "cols": 3,
+          "rows": 4
+        }
+      ],
+      "latestRelease": {
+        "tag": "v1.2.2",
+        "date": "2026-06-21T15:21:25Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.docs/releases/download/v1.2.2/dev.jsos.docs-v1.2.2.zip"
+      }
+    },
     {
       "id": "dev.jsos.music-player",
       "name": {
