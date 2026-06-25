@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T15:45:16.915Z",
+  "generatedAt": "2026-06-25T19:21:55.873Z",
   "appCount": 8,
   "apps": [
     {
@@ -267,7 +267,7 @@
         "repo": "dev.jsos.terminal",
         "url": "https://github.com/jsos-dev/dev.jsos.terminal"
       },
-      "version": "v1.1.10",
+      "version": "v1.1.11",
       "author": {
         "name": "jsos-dev",
         "url": "https://github.com/jsos-dev",
@@ -276,12 +276,12 @@
       "stars": 0,
       "license": null,
       "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.terminal/main/icon.svg",
-      "updatedAt": "2026-06-18T14:38:44Z",
+      "updatedAt": "2026-06-25T17:12:25Z",
       "widgets": [],
       "latestRelease": {
-        "tag": "v1.1.10",
-        "date": "2026-06-18T14:39:02Z",
-        "zipUrl": "https://github.com/jsos-dev/dev.jsos.terminal/releases/download/v1.1.10/dev.jsos.terminal-1.1.10.zip"
+        "tag": "v1.1.11",
+        "date": "2026-06-25T17:12:37Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.terminal/releases/download/v1.1.11/dev.jsos.terminal-1.1.11.zip"
       }
     },
     {
