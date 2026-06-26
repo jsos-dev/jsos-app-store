@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T11:19:15.862Z",
+  "generatedAt": "2026-06-26T18:13:22.399Z",
   "appCount": 8,
   "apps": [
     {
@@ -267,7 +267,7 @@
         "repo": "dev.jsos.settings",
         "url": "https://github.com/jsos-dev/dev.jsos.settings"
       },
-      "version": "v1.2.26",
+      "version": "v1.2.27",
       "author": {
         "name": "jsos-dev",
         "url": "https://github.com/jsos-dev",
@@ -276,12 +276,12 @@
       "stars": 0,
       "license": null,
       "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.settings/main/icon.svg",
-      "updatedAt": "2026-06-26T04:50:43Z",
+      "updatedAt": "2026-06-26T16:06:15Z",
       "widgets": [],
       "latestRelease": {
-        "tag": "v1.2.26",
-        "date": "2026-06-26T04:51:08Z",
-        "zipUrl": "https://github.com/jsos-dev/dev.jsos.settings/releases/download/v1.2.26/dev.jsos.settings-v1.2.26.zip"
+        "tag": "v1.2.27",
+        "date": "2026-06-26T16:06:41Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.settings/releases/download/v1.2.27/dev.jsos.settings-v1.2.27.zip"
       }
     },
     {
