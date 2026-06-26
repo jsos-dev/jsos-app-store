@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T04:45:20.997Z",
+  "generatedAt": "2026-06-26T11:19:15.862Z",
   "appCount": 8,
   "apps": [
     {
@@ -53,6 +53,43 @@
         "tag": "v1.1.0",
         "date": "2026-06-18T15:31:41Z",
         "zipUrl": "https://github.com/jsos-dev/dev.jsos.music-player/releases/download/v1.1.0/dev.jsos.music-player-1.1.0.zip"
+      }
+    },
+    {
+      "id": "dev.pi.coding-agent",
+      "name": {
+        "en": "Pi Agent"
+      },
+      "description": {
+        "en": "Pi is a minimal agent harness.",
+        "zh-CN": "Pi 是一个极简的编程代理框架。"
+      },
+      "type": "cli",
+      "category": "cli",
+      "tags": [
+        "agent",
+        "coding"
+      ],
+      "repository": {
+        "owner": "jsos-dev",
+        "repo": "dev.pi.coding-agent",
+        "url": "https://github.com/jsos-dev/dev.pi.coding-agent"
+      },
+      "version": "v0.80.2",
+      "author": {
+        "name": "jsos-dev",
+        "url": "https://github.com/jsos-dev",
+        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
+      },
+      "stars": 1,
+      "license": null,
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.pi.coding-agent/main/icon.svg",
+      "updatedAt": "2026-06-26T04:25:13Z",
+      "widgets": [],
+      "latestRelease": {
+        "tag": "v0.80.2",
+        "date": "2026-06-26T04:25:26Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.pi.coding-agent/releases/download/v0.80.2/dev.pi.coding-agent-v0.80.2.zip"
       }
     },
     {
@@ -230,7 +267,7 @@
         "repo": "dev.jsos.settings",
         "url": "https://github.com/jsos-dev/dev.jsos.settings"
       },
-      "version": "v1.2.25",
+      "version": "v1.2.26",
       "author": {
         "name": "jsos-dev",
         "url": "https://github.com/jsos-dev",
@@ -239,12 +276,12 @@
       "stars": 0,
       "license": null,
       "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.settings/main/icon.svg",
-      "updatedAt": "2026-06-21T18:30:01Z",
+      "updatedAt": "2026-06-26T04:50:43Z",
       "widgets": [],
       "latestRelease": {
-        "tag": "v1.2.25",
-        "date": "2026-06-21T18:30:23Z",
-        "zipUrl": "https://github.com/jsos-dev/dev.jsos.settings/releases/download/v1.2.25/dev.jsos.settings-v1.2.25.zip"
+        "tag": "v1.2.26",
+        "date": "2026-06-26T04:51:08Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.settings/releases/download/v1.2.26/dev.jsos.settings-v1.2.26.zip"
       }
     },
     {
@@ -320,43 +357,6 @@
         "tag": "v0.0.2",
         "date": "2026-06-25T15:41:45Z",
         "zipUrl": "https://github.com/jsos-dev/dev.jsos.wasm-demo/releases/download/v0.0.2/wasm-demo.zip"
-      }
-    },
-    {
-      "id": "dev.pi.coding-agent",
-      "name": {
-        "en": "Pi Agent"
-      },
-      "description": {
-        "en": "Pi is a minimal agent harness.",
-        "zh-CN": "Pi 是一个极简的编程代理框架。"
-      },
-      "type": "cli",
-      "category": "cli",
-      "tags": [
-        "agent",
-        "coding"
-      ],
-      "repository": {
-        "owner": "jsos-dev",
-        "repo": "dev.pi.coding-agent",
-        "url": "https://github.com/jsos-dev/dev.pi.coding-agent"
-      },
-      "version": "v0.80.2",
-      "author": {
-        "name": "jsos-dev",
-        "url": "https://github.com/jsos-dev",
-        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
-      },
-      "stars": 0,
-      "license": null,
-      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.pi.coding-agent/main/icon.svg",
-      "updatedAt": "2026-06-26T04:25:13Z",
-      "widgets": [],
-      "latestRelease": {
-        "tag": "v0.80.2",
-        "date": "2026-06-26T04:25:26Z",
-        "zipUrl": "https://github.com/jsos-dev/dev.pi.coding-agent/releases/download/v0.80.2/dev.pi.coding-agent-v0.80.2.zip"
       }
     }
   ]
