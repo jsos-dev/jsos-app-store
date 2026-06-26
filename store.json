@@ -1,7 +1,60 @@
 {
-  "generatedAt": "2026-06-25T19:21:55.873Z",
+  "generatedAt": "2026-06-26T04:45:20.997Z",
   "appCount": 8,
   "apps": [
+    {
+      "id": "dev.jsos.music-player",
+      "name": {
+        "en": "Music Player",
+        "zh-CN": "音乐播放器"
+      },
+      "description": {
+        "en": "A music player for playing audio files",
+        "zh-CN": "用于播放音频文件的音乐播放器"
+      },
+      "type": null,
+      "category": "tools",
+      "tags": [
+        "music",
+        "media"
+      ],
+      "repository": {
+        "owner": "jsos-dev",
+        "repo": "dev.jsos.music-player",
+        "url": "https://github.com/jsos-dev/dev.jsos.music-player"
+      },
+      "version": "v1.1.0",
+      "author": {
+        "name": "jsos-dev",
+        "url": "https://github.com/jsos-dev",
+        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
+      },
+      "stars": 1,
+      "license": null,
+      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.music-player/main/icon.svg",
+      "updatedAt": "2026-06-20T11:57:43Z",
+      "widgets": [
+        {
+          "id": "favorites",
+          "name": {
+            "en": "My Favorites",
+            "zh-CN": "我的收藏"
+          },
+          "description": {
+            "en": "Play your favorite songs from the desktop widget",
+            "zh-CN": "在桌面小组件播放你收藏的歌曲"
+          },
+          "url": "/#/widget/favorites",
+          "cols": 3,
+          "rows": 1
+        }
+      ],
+      "latestRelease": {
+        "tag": "v1.1.0",
+        "date": "2026-06-18T15:31:41Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.music-player/releases/download/v1.1.0/dev.jsos.music-player-1.1.0.zip"
+      }
+    },
     {
       "id": "dev.jsos.docs",
       "name": {
@@ -120,59 +173,6 @@
         "tag": "v0.3.7",
         "date": "2026-06-25T14:16:43Z",
         "zipUrl": "https://github.com/jsos-dev/dev.jsos.filemanager/releases/download/v0.3.7/dev.jsos.filemanager-v0.3.7.zip"
-      }
-    },
-    {
-      "id": "dev.jsos.music-player",
-      "name": {
-        "en": "Music Player",
-        "zh-CN": "音乐播放器"
-      },
-      "description": {
-        "en": "A music player for playing audio files",
-        "zh-CN": "用于播放音频文件的音乐播放器"
-      },
-      "type": null,
-      "category": "tools",
-      "tags": [
-        "music",
-        "media"
-      ],
-      "repository": {
-        "owner": "jsos-dev",
-        "repo": "dev.jsos.music-player",
-        "url": "https://github.com/jsos-dev/dev.jsos.music-player"
-      },
-      "version": "v1.1.0",
-      "author": {
-        "name": "jsos-dev",
-        "url": "https://github.com/jsos-dev",
-        "avatar": "https://avatars.githubusercontent.com/u/294704644?v=4"
-      },
-      "stars": 0,
-      "license": null,
-      "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.music-player/main/icon.svg",
-      "updatedAt": "2026-06-20T11:57:43Z",
-      "widgets": [
-        {
-          "id": "favorites",
-          "name": {
-            "en": "My Favorites",
-            "zh-CN": "我的收藏"
-          },
-          "description": {
-            "en": "Play your favorite songs from the desktop widget",
-            "zh-CN": "在桌面小组件播放你收藏的歌曲"
-          },
-          "url": "/#/widget/favorites",
-          "cols": 3,
-          "rows": 1
-        }
-      ],
-      "latestRelease": {
-        "tag": "v1.1.0",
-        "date": "2026-06-18T15:31:41Z",
-        "zipUrl": "https://github.com/jsos-dev/dev.jsos.music-player/releases/download/v1.1.0/dev.jsos.music-player-1.1.0.zip"
       }
     },
     {
@@ -342,7 +342,7 @@
         "repo": "dev.pi.coding-agent",
         "url": "https://github.com/jsos-dev/dev.pi.coding-agent"
       },
-      "version": "v0.79.10",
+      "version": "v0.80.2",
       "author": {
         "name": "jsos-dev",
         "url": "https://github.com/jsos-dev",
@@ -351,12 +351,12 @@
       "stars": 0,
       "license": null,
       "icon": "https://raw.githubusercontent.com/jsos-dev/dev.pi.coding-agent/main/icon.svg",
-      "updatedAt": "2026-06-23T15:23:13Z",
+      "updatedAt": "2026-06-26T04:25:13Z",
       "widgets": [],
       "latestRelease": {
-        "tag": "v0.79.10",
-        "date": "2026-06-23T15:15:09Z",
-        "zipUrl": "https://github.com/jsos-dev/dev.pi.coding-agent/releases/download/v0.79.10/dev.pi.coding-agent-v0.79.10.zip"
+        "tag": "v0.80.2",
+        "date": "2026-06-26T04:25:26Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.pi.coding-agent/releases/download/v0.80.2/dev.pi.coding-agent-v0.80.2.zip"
       }
     }
   ]
