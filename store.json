@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T18:13:22.399Z",
+  "generatedAt": "2026-06-27T09:19:53.777Z",
   "appCount": 8,
   "apps": [
     {
@@ -114,7 +114,7 @@
         "repo": "dev.jsos.docs",
         "url": "https://github.com/jsos-dev/dev.jsos.docs"
       },
-      "version": "v1.2.2",
+      "version": "v1.2.3",
       "author": {
         "name": "jsos-dev",
         "url": "https://github.com/jsos-dev",
@@ -123,7 +123,7 @@
       "stars": 0,
       "license": null,
       "icon": "https://raw.githubusercontent.com/jsos-dev/dev.jsos.docs/main/icon.svg",
-      "updatedAt": "2026-06-21T15:20:50Z",
+      "updatedAt": "2026-06-26T18:25:23Z",
       "widgets": [
         {
           "id": "doc-nav",
@@ -141,9 +141,9 @@
         }
       ],
       "latestRelease": {
-        "tag": "v1.2.2",
-        "date": "2026-06-21T15:21:25Z",
-        "zipUrl": "https://github.com/jsos-dev/dev.jsos.docs/releases/download/v1.2.2/dev.jsos.docs-v1.2.2.zip"
+        "tag": "v1.2.3",
+        "date": "2026-06-26T18:25:57Z",
+        "zipUrl": "https://github.com/jsos-dev/dev.jsos.docs/releases/download/v1.2.3/dev.jsos.docs-v1.2.3.zip"
       }
     },
     {
